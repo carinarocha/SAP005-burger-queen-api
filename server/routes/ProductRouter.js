@@ -15,7 +15,7 @@ router.post("/products/add", productController.addProduct);
 
 //---------------------------------HTTP METHOD: PUT--------------------------------------//
 //updateProducts
-router.put("/products/update/:id", productController.updateProduct);
+router.put("/products/:id", productController.updateProduct);
 
 //---------------------------------HTTP METHOD: DELETE--------------------------------------//
 //deleteProducts

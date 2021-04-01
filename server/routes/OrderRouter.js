@@ -1,21 +1,24 @@
 const { Router } = require('express');
-const orderController = require('../controller/orderController');
+const orderController = require('../controller/OrderController');
 
 const router = Router();
 
 //---------------------------------HTTP METHOD: GET--------------------------------------//
-//allProducts request
+//allOrders request
 router.get("/orders", orderController.allOrders);
-//productsById request
+//ordersById request
 router.get("/orders/:id", orderController.ordersById);
 
 //---------------------------------HTTP METHOD: POST-------------------------------------//
-//addProducts request
+//addOrders request
 router.post("/orders/add", orderController.addOrders);
 
 //---------------------------------HTTP METHOD: PUT--------------------------------------//
-//updateProducts
+//updateOrders request
 router.put("/orders/update/:id", orderController.updateOrders);
 
+//---------------------------------HTTP METHOD: DELETE--------------------------------------//
+//deleteOrders request
+router.put("/orders/delete", orderController.deleteOrders);
 
 module.exports = router
